@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        html, body {
+            margin: 0;
+            height: 100%;
+        }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: rgb(17, 23, 60);
+            padding: 20px;
+            padding-top: 80px;
+            padding-bottom: 80px;
+            text-align: center;
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(16, 9, 9, 0.5);
+        }
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            margin-bottom: 30px;
+        }
+        .form {
+            text-align: left;
+        }
+        label {
+            color: white;
+            display: block;
+            margin-bottom: 5px;
+        }
+        button {
+            margin-top: 20px;
+            width: 100%;
+            height: 40px;
+            border-radius: 10px;
+            border: 0;
+            background-color: blue;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        input {
+            background-color: rgb(60, 101, 138);
+            border: 0;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            height: 30px;
+            padding-left: 10px;
+            width: calc(100% - 15px);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="profileInfo"></div>
+        <img src="profile.jpeg" alt="Profile">
+        <form class="form">
+            <label for="name">User Name</label>
+            <input id="name" name="name" type="text" class="name" required readonly>
+            <label for="mail">Email</label>
+            <input name="mail" id="mail" type="email" class="mail" required readonly>
+            <button type="button" onclick="logout()">Logout</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

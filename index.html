@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+        html,body{
+            margin: 0;
+            height: 100%;
+            scroll-behavior: smooth;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        body{
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+        }
+        nav{
+            display: flex;
+            gap: 20px;
+        }
+        nav img{
+            width: 50px;
+        }
+        .container{
+            display: flex;
+            height: 100vh;
+            gap: 10px;
+        }
+        .content{
+            /* border: 2px solid black; */
+            width: 50%;
+            height: 80%;
+            padding: 20px;
+        }
+
+        .image{
+            /* border: 2px solid black; */
+            width: 50%;
+            height: 80%;
+            padding: 20px;
+        }
+        .image img{
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            border-radius: 40px;
+        }
+        h1{
+            font-weight: bolder;
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        h3{
+            color: rgb(32, 31, 31);
+        }
+        input{
+            width: 100%;
+            height: 40px;
+            border-radius: 10px;
+            border: 2px solid black;
+        }
+        .check {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 25px;
+        }
+        .check .checkbox-container {
+            display: flex;
+            align-items: center;
+        }
+        #check {
+            width: 25px;
+        }
+        .check label {
+            margin-left: 5px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        button{
+            margin-top: 20px;
+            width: 100%;
+            height: 40px;
+            border-radius: 10px;
+            border: 0;
+            background-color: blue;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        h4{
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+            color: rgb(177, 7, 39);
+        }
+        .connect {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        .connect div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid rgb(21, 61, 193);
+            width: 190px;
+            height: 60px;
+            border-radius: 10px;
+        }
+        .connect img {
+            object-fit: cover;
+            width: 35px;
+        }
+        @media screen and (max-width: 375px){
+            .container{
+                flex-direction: column;
+                height: auto;
+            }
+            .content, .image {
+                width: 100%;
+                height: auto;
+                padding: 10px;
+            }
+            .image img {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="logo.png" alt="logo">
+        <h1>Bond Street</h1>
+    </nav>
+    <div class="container">
+        <div class="content">
+            <h1>Login</h1>
+            <h3>Login to access your travelwise account</h3>
+            <form onsubmit="login()">
+                <label for="mail">
+                    <input type="email" name="mail" class="mail" id="mail" placeholder="Email" required>
+                </label><br><br>
+                <label for="pass">
+                    <input type="password" name="pass" id="pass" class="pass" placeholder="Password" required>
+                </label><br><br>
+                <div class="check">
+                    <div class="checkbox-container">
+                        <input type="checkbox" name="check" id="check" required>
+                        <label for="check">Remember me</label>
+                    </div>
+                    <h4><a href="forget.html">Forget password</a></h4>
+                </div>
+                <button type="submit" onclick="login()"><a href="verify.html" style="color: white;">Login</a></button>
+            </form>
+            <h4>Don't have an account ? <a href="signup.html">Sign Up</a></h4>
+            <h4  style="color: rgb(75, 73, 73);padding-top: 20px;">Or Login with</h4>
+            <div class="connect">
+                <div class="connect1"><img src="fb.png" alt="Facebook"></div>
+                <div class="connect2"><img src="google.jpg" alt="Google" style="width: 50px; align-items: center;"></div>
+                <div class="connect3"><img src="apple.webp" style="width: 60px;"></div>
+            </div>
+        </div>
+        <div class="image">
+            <img src="log.avif" alt="Log In">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
